@@ -27,7 +27,9 @@ function multiplication()
         document.getElementById('out').innerHTML = rezult;
     }
 }
-window.addEventListener('DOMContentLoaded', function(event) {
+window.addEventListener('DOMContentLoaded', function(
+
+) {
     console.log("DOM fully loaded and parsed");
     let b = document.getElementById("result-btn");
     b.addEventListener("click", multiplication);
