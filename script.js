@@ -6,7 +6,8 @@ function multiplication()
     num2 = document.getElementById('b').value;
     num2 = parseInt(num2);
     let reg = /[A-Za-zА-Яа-яЁё]/g;
-    if(reg.test(num1)||reg.test(num2) || num1<0||num2<0)
+    const reg1 =/^[1-9][0-9]*$/;
+    if(reg.test(num1)||reg.test(num2))
     {
         alert('Вводить можно только положительные числа!');
     }
@@ -15,7 +16,7 @@ function multiplication()
         alert('Введите значения!');
     }
     rezult = num1*num2;
-    if(rezult<=0)
+    if(!reg1.test(num1)||reg1.test(num2))
     {
         alert('Ошибка! Вводите только положительные числа , которые больше 0!');
         let str = "Ошибка!";
