@@ -16,7 +16,7 @@ function multiplication()
         alert('Введите значения!');
     }
     rezult = num1*num2;
-    if(!reg1.test(num1)||reg1.test(num2))
+    if(!reg1.test(num1)||!reg1.test(num2))
     {
         alert('Ошибка! Вводите только положительные числа , которые больше 0!');
         let str = "Ошибка!";
@@ -27,10 +27,8 @@ function multiplication()
         document.getElementById('out').innerHTML = rezult;
     }
 }
-window.addEventListener('DOMContentLoaded', function(
-
-) {
+window.addEventListener('DOMContentLoaded', function() {
     console.log("DOM fully loaded and parsed");
     let b = document.getElementById("result-btn");
-    b.addEventListener("click", multiplication);
+    b.addEventListener("click",multiplication);
 });
